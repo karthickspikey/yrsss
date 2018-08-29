@@ -1,0 +1,8 @@
+---
+- name: Get Output Without File
+  hosts: all
+  tasks:
+   - name: Ececuting command
+     raw: echo "Hello World"
+     register: output
+   - debug: var=output.stdout
